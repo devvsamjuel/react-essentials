@@ -12,7 +12,6 @@ function App() {
   const [selectedBlade, setSelectedTopic] = useState();
 
   function handleSelect(blade) {
-    console.log(blade);
     setSelectedTopic(blade);
   }
 
