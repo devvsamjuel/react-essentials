@@ -4,6 +4,7 @@ import { EXAMPLES } from '../../data/Examples'
 import { TAB_BUTTON_BLADES } from '../../data/TabButtonBlades'
 import TabButton from '../TabButton/TabButton';
 import Section from '../Section/Section';
+import Tabs from '../Tabs/Tabs';
 
 function Examples() {
 
@@ -32,18 +33,17 @@ function Examples() {
 
     return (
         <Section id="examples" title="Examples">
-            <menu>
-                {
-                    TAB_BUTTON_BLADES.map((blade) => (
-                        <TabButton
-                            key={blade}
-                            isSelected={selectedBlade === blade}
-                            text={blade} onClick={() => { handleSelect(blade) }}
-                        />
-                    ))
-                }
-            </menu>
-            {tabContent}
+            <Tabs buttons={
+                TAB_BUTTON_BLADES.map((blade) => (
+                    <TabButton
+                        key={blade}
+                        isSelected={selectedBlade === blade}
+                        text={blade} onClick={() => { handleSelect(blade) }}
+                    />
+                ))
+            }>
+                {tabContent}
+            </Tabs>
         </Section>
     )
 }
