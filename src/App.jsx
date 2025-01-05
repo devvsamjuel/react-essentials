@@ -16,7 +16,7 @@ function App() {
     setSelectedTopic(blade);
   }
 
-  let tabContent = <p>Please select a topic.</p>;
+  let tabContent = <p>Please select a topic blade.</p>;
 
   if (selectedBlade) {
     console.log(selectedBlade);
