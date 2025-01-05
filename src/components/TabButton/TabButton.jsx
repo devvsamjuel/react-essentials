@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import "./TabButton.css"
 
-function TabButton({ isSelected, text, onSelect }) {
+function TabButton({ isSelected, text, ...props }) {
     console.log(`${text} TABBUTTON COMPONENT EXECUTING`);
     return (
         <li>
-            <button className={isSelected ? 'active' : undefined} onClick={onSelect}>
+            <button className={isSelected ? 'active' : undefined} {...props}>
                 {text}
             </button>
         </li>

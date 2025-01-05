@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { EXAMPLES } from '../../data/Examples'
 import { TAB_BUTTON_BLADES } from '../../data/TabButtonBlades'
 import TabButton from '../TabButton/TabButton';
+import Section from '../Section/Section';
 
 function Examples() {
 
@@ -30,21 +31,20 @@ function Examples() {
     }
 
     return (
-        <section id="examples">
-            <h2>Examples</h2>
+        <Section id="examples" title="Examples">
             <menu>
                 {
                     TAB_BUTTON_BLADES.map((blade) => (
                         <TabButton
                             key={blade}
                             isSelected={selectedBlade === blade}
-                            text={blade} onSelect={() => { handleSelect(blade) }}
+                            text={blade} onClick={() => { handleSelect(blade) }}
                         />
                     ))
                 }
             </menu>
             {tabContent}
-        </section>
+        </Section>
     )
 }
 
