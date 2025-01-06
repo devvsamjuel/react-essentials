@@ -33,15 +33,17 @@ function Examples() {
 
     return (
         <Section id="examples" title="Examples">
-            <Tabs buttons={
-                TAB_BUTTON_BLADES.map((blade) => (
-                    <TabButton
-                        key={blade}
-                        isSelected={selectedBlade === blade}
-                        text={blade} onClick={() => { handleSelect(blade) }}
-                    />
-                ))
-            }>
+            <Tabs
+                BladeContainerElement="menu"
+                buttons={
+                    TAB_BUTTON_BLADES.map((blade) => (
+                        <TabButton
+                            key={blade}
+                            isSelected={selectedBlade === blade}
+                            text={blade} onClick={() => { handleSelect(blade) }}
+                        />
+                    ))
+                }>
                 {tabContent}
             </Tabs>
         </Section>
