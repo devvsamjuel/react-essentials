@@ -17,6 +17,5 @@ export default TabButton;
 // Prop validation using PropTypes
 TabButton.propTypes = {
     isSelected: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired,
-    onSelect: PropTypes.func.isRequired
+    text: PropTypes.string.isRequired
 };
