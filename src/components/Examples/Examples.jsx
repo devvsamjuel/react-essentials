@@ -8,10 +8,10 @@ import Tabs from '../Tabs/Tabs';
 
 function Examples() {
 
-    const [selectedBlade, setSelectedTopic] = useState();
+    const [selectedBlade, setSelectedBladeText] = useState();
 
-    function handleSelect(blade) {
-        setSelectedTopic(blade);
+    function handleSelectedBlade(blade) {
+        setSelectedBladeText(blade);
     }
 
     let tabContent = <p>Please select a topic blade.</p>;
@@ -40,7 +40,7 @@ function Examples() {
                         <TabButton
                             key={blade}
                             isSelected={selectedBlade === blade}
-                            text={blade} onClick={() => { handleSelect(blade) }}
+                            text={blade} onClick={() => { handleSelectedBlade(blade) }}
                         />
                     ))
                 }>
