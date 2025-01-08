@@ -17,9 +17,6 @@ function Examples() {
     let tabContent = <p>Please select a topic blade.</p>;
 
     if (selectedBlade) {
-        console.log(selectedBlade);
-        console.log(EXAMPLES[selectedBlade]);
-
         tabContent = (
             <div id="tab-content">
                 <h3>{EXAMPLES[selectedBlade].title}</h3>

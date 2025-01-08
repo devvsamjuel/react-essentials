@@ -13,6 +13,5 @@ export default function Section({ title, children, ...props }) {
 // Prop validation using PropTypes
 Section.propTypes = {
     title: PropTypes.string,
-    id: PropTypes.string,
     children: PropTypes.object
 };
